@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* base elements */
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-transform: uppercase;
+}
+
+/* background images */
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("assets/home/background-home-mobile.jpg");
+  background-size: cover;
+}
+
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("assets/shared/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar--mobile {
+    width: 30px;
+    height: 30px;
+    background-image: url("assets/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* homepage */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.explore {
+  height: 200px;
+  width: 200px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 50%;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
+  display: grid;
+  place-content: center;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .background {
+    background-image: url("assets/home/background-home-tablet.jpg");
+  }
+
+  .navbar--mobile {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px solid green;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+  .background {
+    background-image: url("assets/home/background-home-desktop.jpg");
+  }
 }
