@@ -3,7 +3,7 @@ import Header from '../components/Header';
 
 const Home = () => {
   return (
-    <div className="background">
+    <div className="background--home">
       <Header />
       <main className='home'>
         <p>So, you want to travel to</p>
@@ -20,4 +20,4 @@ const Home = () => {
   );
 }
 
-export default Home
+export default Home;
