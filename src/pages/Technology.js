@@ -8,21 +8,25 @@ const Technology = () => {
   const { name, images, description } = technology[value];
   
   return (
-    <div className="background--technology">
+    <div className="technology">
       <Header />
-      <main className="technology">
-        <p>03 space launch 101</p>
-        {technology.map((tech, index) => {
-          return <button key={tech.index} onClick={() => setValue(index)}>{index + 1}</button>;
-        })}
-        {name}
-        <br></br>
+      <main>
+        <span>
+          <b>03</b> space launch 101
+        </span>
+        <img className="technology__img" src={images.portrait} alt={name} />
         <div>
-          
+          {technology.map((tech, index) => {
+            return (
+              <button key={index.toString()} onClick={() => setValue(index)}>
+                {index + 1}
+              </button>
+            );
+          })}
         </div>
-        <img src={images.portrait} alt={name} />
-        <br></br>
-        {description}
+        <span>the terminology</span>
+        <h4>{name}</h4>
+        <p>{description}</p>
       </main>
     </div>
   );

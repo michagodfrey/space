@@ -4,19 +4,27 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div className="navbar--mobile"></div>
+      <button className="navbar__btn"></button>
       <ul className="navbar">
         <Link to="/">
-          <li>Home</li>
+          <li className="navbar__link">
+            <b className="navbar__n">01</b> home
+          </li>
         </Link>
         <Link to="/destination">
-          <li>Destination</li>
+          <li className="navbar__link">
+            <b className="navbar__n">02</b> destination
+          </li>
         </Link>
         <Link to="/crew">
-          <li>Crew</li>
+          <li className="navbar__link">
+            <b className="navbar__n">03</b> crew
+          </li>
         </Link>
         <Link to="/technology">
-          <li>Technology</li>
+          <li className="navbar__link">
+            <b className="navbar__n">04</b> technology
+          </li>
         </Link>
       </ul>
     </>
