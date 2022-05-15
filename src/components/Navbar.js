@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({openSidebar}) => {
   return (
     <>
-      <button className="navbar__btn"></button>
+      <button className="navbar__btn" onClick={openSidebar}></button>
       <ul className="navbar">
         <Link to="/">
           <li className="navbar__link">

@@ -16,7 +16,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 
 /* =================================================
@@ -38,6 +38,7 @@ ul {
   padding-left: 0;
 }
 
+/* home title */
 h1 {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
@@ -47,6 +48,7 @@ h1 {
   margin: 1rem 0;
 }
 
+/* destination names */
 h2 {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
@@ -54,6 +56,7 @@ h2 {
   margin: 1.25rem 0 0;
 }
 
+/* av distance and travel time */
 h3 {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
@@ -61,24 +64,49 @@ h3 {
   margin: .75rem 0;
 }
 
+/* crew and tech names */
 h4 {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
   font-size: 1.5rem;
   line-height: 167%;
-  margin: 0;
+  margin: .5rem;
 }
 
+/* top line each page */
 h5 {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 19.2px;
   text-align: center;
-  color: #D0D6F9;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 2.7px;
   margin: 0;
+  align-self: center;
+}
+
+/* crew role */
+h6 {
+  font-family: 'Bellefair', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  margin: 2rem 0 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: .5;
+}
+
+/* destination nav links and subheadings for av dist/travel */
+span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .875rem;
+  letter-spacing: 2.3625px;
+  text-align: center;
+  color: #D0D6F9;
+  text-transform: uppercase;
 }
 
 p {
@@ -88,15 +116,6 @@ p {
   text-align: center;
   color: #D0D6F9;
   margin: 0;
-}
-
-span {
-  font-family: 'Barlow', sans-serif;
-  line-height: 19px;
-  text-align: center;
-  color: #D0D6F9;
-  text-transform: uppercase;
-  letter-spacing: 2.7px;
 }
 
 /* =================================================
@@ -164,7 +183,15 @@ header {
   sidebar
 ==================================================== */
 
+.sidebar {
+  /* display: none; */
+  background-color: red;
+}
 
+.sidebar--active {
+  background-color: green;
+  /* display: block; */
+}
 
 /* =================================================
   home page
@@ -185,6 +212,10 @@ header {
 .home__text {
   max-width: 450px;
   text-align: center;
+}
+
+.home__text h5 {
+  color: #D0D6F9;
 }
 
 .home__explore {
@@ -214,19 +245,24 @@ header {
   background-size: cover;
 }
 
+.destination__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .destination__img {
-  height: 170px;
-  width: 170px;
+  height: auto;
+  width: 52%;
+  max-width: 300px;
   margin: 2rem 0 1.5rem;
 }
 
+.destination__text {
+  text-align: center;
+}
+
 .destination__btn {
-  font-size: .875rem;
-  line-height: 17px;
-  letter-spacing: 2.3625px;
-  text-transform: uppercase;
-  font-family: 'Barlow', sans-serif;
-  color: #D0D6F9;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   padding: .5rem;
@@ -244,18 +280,19 @@ header {
   background-color: #383B4B;
 }
 
+.destination__footer {
+  display: flex;
+  flex-direction: column;
+}
+
 .destination__box {
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.destination__subheading {
-  font-size: .875rem;
-  line-height: 17px;
-  letter-spacing: 2.3625px;
-}
-
-/* crew */
+/* =================================================
+  crew
+==================================================== */
 
 .crew {
   height: 100%;
@@ -264,16 +301,28 @@ header {
   background-size: cover;
 }
 
+.crew__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .crew__img {
-  width: 65%;
-  height: auto;
+  width: 66%;
+  height: 280px;
   margin-top: 2rem;
+  /* background-color: red; */
+  grid-area: img-c;
 }
 
 .crew__line {
-  width: 100%;
+  width: 327px;
   height: 1px;
   background-color: #383B4B;
+}
+
+.crew__btn-container {
+  grid-area: btns-c;
 }
 
 .crew__btn {
@@ -290,13 +339,15 @@ header {
   opacity: 1;
 }
 
-.crew__role {
-  font-family: 'Bellefair', serif;
-  line-height: 1.125rem;
-  margin-top: 2rem;
+.crew__text {
+  text-align: center;
+  padding: 0 1.5rem;
+  grid-area: txt-c;
 }
 
-/* technology */
+/* =================================================
+  technology
+==================================================== */
 
 .technology {
   height: 100%;
@@ -305,15 +356,54 @@ header {
   background-size: cover;
 }
 
-.technology__img {
-  height: 170px;
-  width: 100%;
-  
+.technology__grid {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 
-/* media queries */
+.technology__img {
+  width: 100%;
+  height: 170px;
+  margin-top: 2rem;
+  grid-area: img;
+}
+
+.technology__btn-container {
+  margin: 2rem 0;
+  grid-area: btns;
+}
+
+.technology__btn {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  padding: .5rem;
+  margin: 0 .5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.technology__btn--active {
+  color: #0B0D17;
+  background-color: #fff;
+}
+
+.technology__text {
+  text-align: center;
+  padding: 1.5rem;
+  grid-area: txt;
+}
+
+/* =================================================
+  tablet screen
+==================================================== */
 
 @media (min-width: 768px) {
+
+  /* typography */
 
   h1 {
     font-size: 150px;
@@ -332,11 +422,30 @@ header {
     letter-spacing: 3.375px;
   }
 
+  /* header and navigation */
+
 .header__logo {
     height: 48px;
     width: 48px;
     margin: 0 0 0 2.5rem;
   }
+
+  .navbar__btn {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6rem;
+    width: 60%;
+    margin: 0;
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(81.5485px);
+  }
+
+  /* home  */
 
   .home {
     background-image: url("../public/assets/home/background-home-tablet.jpg");
@@ -356,37 +465,93 @@ header {
     letter-spacing: 3.375;
   }
   
+  /* destination */
+
   .destination {
     background-image: url("../public/assets/destination/background-destination-tablet.jpg");
   }
+
+  .destination h5 {
+    align-self: flex-start;
+    margin-left: 2.5rem;
+  }
+
+  .destination__text {
+    padding: 0 5rem;
+  }
+
+  .destination__footer {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  /* crew */
 
   .crew {
     background-image: url("../public/assets/crew/background-crew-tablet.jpg");
   }
 
+  .crew__content {
+    flex-direction: column-reverse;
+  }
+
+  .crew__line {
+    display: none;
+  }
+
+  .crew__img {
+    height: 572px;
+  }
+
+  /* technology */
+
   .technology {
     background-image: url("../public/assets/technology/background-technology-tablet.jpg");
   }
 
-  .navbar__btn {
-    display: none;
+  .technology h5 {
+    align-self: flex-start;
+    margin-left: 2.5rem;
   }
 
-  .navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 6rem;
-    width: 60%;
-    margin: 0;
-    background-color: rgba(255, 255, 255, .4);
-    backdrop-filter: blur(81.5485px);
+  .technology__img {
+    height: 310px;
+  }
+
+  .technology__btn-container {
+    margin: 3.5rem 0;
+  }
+
+  .technology__btn {
+    height: 58px;
+    width: 58px;
+  }
+
+  .technology h4{
+    font-size: 2.5rem;
+  }
+
+  .technology__text {
+    padding: 0 9.75em;
   }
 
 }
 
+/* =================================================
+  desktop screen
+==================================================== */
+
 @media (min-width: 1024px) {
 
+  /* base elements */
+
+  main {
+    padding: 4.75rem 10rem;
+  }
+
+  /* typography */
+  
   h1, h5, p {
     text-align: left;
   }
@@ -401,6 +566,8 @@ header {
     letter-spacing: 4.725px;
   }
 
+  /* header and navigation */
+
   .header__line {
     margin: 2rem 10.5rem;
     width: 30%;
@@ -412,6 +579,8 @@ header {
     color: #fff;
     opacity: 1;
   }
+
+  /* home */
 
   .home {
     background-image: url("../public/assets/home/background-home-desktop.jpg");
@@ -437,15 +606,83 @@ header {
     width: 274px;
   }
 
+  /* desintation */
+
   .destination {
+    height: 100vh;
     background-image: url("../public/assets/destination/background-destination-desktop.jpg");
   }
+
+  .destination__content {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .destination__img {
+    max-width: 445px;
+  }
+
+  .destination__text {
+    flex-basis: 50%;
+    text-align: start;
+  }
+
+  .destination__footer {
+    justify-content: flex-start;
+  }
+
+  .destination__box {
+    margin-right: 5rem;
+  }
+
+  /* crew */
 
   .crew {
     background-image: url("../public/assets/crew/background-crew-desktop.jpg");
   }
 
+  .crew__content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+      "txt-c img-c"
+      "btns-c img-c"
+    ;
+  }
+
+    .crew h5 {
+      align-self: flex-start;
+      margin-left: 2.5rem;
+    }
+
+  /* technology */
+
   .technology {
+    height: 100vh;
     background-image: url("../public/assets/technology/background-technology-desktop.jpg");
+  }
+
+  .technology__grid {
+    display: grid;
+    grid-template-columns: 20%;
+    grid-template-areas: 
+    "btns txt img img img"; 
+  }
+
+  .technology__text {
+    padding: 0;
+  }
+
+  .technology__img {
+    width: 515px;
+    height: 527px;
+    margin: 0;
+  }
+
+  .technology__btn-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
   }
 }
