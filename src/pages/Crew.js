@@ -14,7 +14,7 @@ const Crew = () => {
         <h5>
           <b>02</b> meet your crew
         </h5>
-        <div className='crew__content'>
+        <div className='flexbox crew__content'>
           <img className="crew__img" src={images.webp} alt={name} />
           <div className="crew__line"></div>
           <div className='crew__btn-container'>
@@ -30,7 +30,7 @@ const Crew = () => {
               );
             })}
           </div>
-          <div className="crew__text">
+          <div className="flex-item crew__text">
             <h6>{role}</h6>
             <h4>{name}</h4>
             <p>{bio}</p>

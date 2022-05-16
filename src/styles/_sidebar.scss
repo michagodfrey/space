@@ -1,0 +1,29 @@
+/* =================================================
+  sidebar
+==================================================== */
+
+.sidebar__btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    background-image: url("../public/assets/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.sidebar {
+    display: none;
+    background-color: red;
+}
+
+.sidebar--active {
+    background-color: green;
+}

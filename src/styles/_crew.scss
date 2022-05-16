@@ -7,12 +7,37 @@
     width: 100%;
     background-image: url("../public/assets/crew/background-crew-mobile.jpg");
     background-size: cover;
+
+    h5 {
+        text-align: center;
+
+        @include tablet {
+                text-align: left;
+            }
+    }
+
+    @include tablet {
+        background-image: url("../public/assets/crew/background-crew-tablet.jpg");
+    }
+
+    @include desktop {
+        background-image: url("../public/assets/crew/background-crew-desktop.jpg");
+    }
 }
 
 .crew__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include tablet {
+        flex-direction: column-reverse;
+    }
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "txt-c img-c"
+            "btns-c img-c"
+        ;
+    }
 }
 
 .crew__img {
@@ -20,12 +45,20 @@
     height: 280px;
     margin-top: 2rem;
     grid-area: img-c;
+
+    @include tablet {
+        height: 572px;
+    }
 }
 
 .crew__line {
     width: 327px;
     height: 1px;
     background-color: #383B4B;
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .crew__btn-container {
@@ -47,49 +80,5 @@
 }
 
 .crew__text {
-    text-align: center;
-    padding: 0 1.5rem;
     grid-area: txt-c;
-}
-
-@media (min-width: 768px) {
-    /* crew */
-    
-        .crew {
-            background-image: url("../public/assets/crew/background-crew-tablet.jpg");
-        }
-    
-        .crew__content {
-            flex-direction: column-reverse;
-        }
-    
-        .crew__line {
-            display: none;
-        }
-    
-        .crew__img {
-            height: 572px;
-        }
-}
-
-@media (min-width: 1024px) {
-    /* crew */
-    
-        .crew {
-            background-image: url("../public/assets/crew/background-crew-desktop.jpg");
-        }
-    
-        .crew__content {
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-areas:
-                "txt-c img-c"
-                "btns-c img-c"
-            ;
-        }
-    
-        .crew h5 {
-            align-self: flex-start;
-            margin-left: 2.5rem;
-        }
 }

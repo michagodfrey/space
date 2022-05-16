@@ -21,6 +21,16 @@ h1 {
     font-weight: 400;
     line-height: 125%;
     margin: 1rem 0;
+
+    @include tablet {
+        font-size: 150px;
+        line-height: 150px;
+    }
+
+    @include desktop {
+        line-height: 172px;
+        text-align: left;
+    }
 }
 
 /* destination names */
@@ -58,7 +68,19 @@ h5 {
     text-transform: uppercase;
     letter-spacing: 2.7px;
     margin: 0;
-    align-self: center;
+
+    @include tablet {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 3.37px;
+    }
+
+    @include desktop {
+        font-size: 1.75rem;
+        line-height: 34px;
+        letter-spacing: 4.725px;
+        text-align: left;
+    }
 }
 
 /* crew role */
@@ -90,45 +112,14 @@ p {
     color: #D0D6F9;
     margin: 0;
     max-width: 450px;
-}
 
-@media (min-width: 768px) {
-    /* typography */
-    
-        h1 {
-            font-size: 150px;
-            line-height: 150px;
-        }
-    
-        h5 {
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: 3.37px;
-        }
-    
-        p {
-            font-size: 16px;
-            line-height: 167%;
-            letter-spacing: 3.375px;
-        }
-}
+    @include tablet {
+        font-size: 16px;
+        line-height: 167%;
+        letter-spacing: 3.375px;
+    }
 
-@media (min-width: 1024px) {
-    /* typography */
-    
-        h1,
-        h5,
-        p {
-            text-align: left;
-        }
-    
-        h1 {
-            line-height: 172px;
-        }
-    
-        h5 {
-            font-size: 1.75rem;
-            line-height: 34px;
-            letter-spacing: 4.725px;
-        }
+    @include desktop {
+        text-align: left;
+    }
 }

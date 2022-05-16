@@ -1,0 +1,42 @@
+/* =================================================
+  header
+==================================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+        padding-top: 2.5rem;
+    }
+}
+
+.header__logo {
+    width: 40px;
+    height: 40px;
+    margin: 1.5rem;
+    cursor: pointer;
+    background-image: url("../public/assets/shared/logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include tablet {
+        height: 48px;
+        width: 48px;
+        margin: 0 0 0 2.5rem;
+    }
+}
+
+.header__line {
+    width: 0;
+    height: 1px;
+    background-color: #383B4B;
+
+    @include desktop {
+        margin: 2rem 10.5rem;
+        width: 30%;
+        position: absolute;
+    }
+}

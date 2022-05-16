@@ -7,12 +7,38 @@
     width: 100%;
     background-image: url("../public/assets/destination/background-destination-mobile.jpg");
     background-size: cover;
+
+    h5 {
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+        }
+    }
+
+    @include tablet {
+        background-image: url("../public/assets/destination/background-destination-tablet.jpg");
+    }
+
+    @include desktop {
+        height: 100vh;
+        background-image: url("../public/assets/destination/background-destination-desktop.jpg");
+    }
+}
+
+.grid {
+    @include desktop {
+        display: grid;
+        place-content: center;
+    }
 }
 
 .destination__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100%;
+    }
 }
 
 .destination__img {
@@ -20,10 +46,16 @@
     width: 52%;
     max-width: 300px;
     margin: 2rem 0 1.5rem;
+
+    @include desktop {
+        max-width: 445px;
+    }
 }
 
 .destination__text {
-    text-align: center;
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .destination__btn {
@@ -45,65 +77,22 @@
 }
 
 .destination__footer {
-    display: flex;
-    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    @include desktop {
+        justify-content: flex-start;
+    }
 }
 
-.destination__box {
-    margin-bottom: 2rem;
-    text-align: center;
-}
+.destination__footnote {
+    margin: 0 0 2rem 0;
 
-@media (min-width: 768px) {
-    /* destination */
-    
-        .destination {
-            background-image: url("../public/assets/destination/background-destination-tablet.jpg");
-        }
-    
-        .destination h5 {
-            align-self: flex-start;
-            margin-left: 2.5rem;
-        }
-    
-        .destination__text {
-            padding: 0 5rem;
-        }
-    
-        .destination__footer {
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-evenly;
-        }
-}
+    @include desktop {
+        margin: 0 5rem 0 0;
+    }
 
-@media (min-width: 1024px) {
-    /* desintation */
-    
-        .destination {
-            height: 100vh;
-            background-image: url("../public/assets/destination/background-destination-desktop.jpg");
-        }
-    
-        .destination__content {
-            flex-direction: row;
-            justify-content: space-evenly;
-        }
-    
-        .destination__img {
-            max-width: 445px;
-        }
-    
-        .destination__text {
-            flex-basis: 50%;
-            text-align: start;
-        }
-    
-        .destination__footer {
-            justify-content: flex-start;
-        }
-    
-        .destination__box {
-            margin-right: 5rem;
-        }
 }

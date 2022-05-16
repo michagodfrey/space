@@ -22,7 +22,17 @@
 
     @include desktop {
         background-image: url("../public/assets/home/background-home-desktop.jpg");
-        padding-top: 2.5rem;
+    }
+}
+
+.home__content {
+    @include tablet {
+        justify-content: space-evenly;
+    }
+
+    @include desktop {
+        width: 100%;
+        flex-direction: row;
     }
 }
 
@@ -50,17 +60,5 @@
     @include desktop {
         height: 274px;
         width: 274px;
-    }
-}
-
-
-.home__content {
-    @include tablet {
-        justify-content: space-evenly;
-    }
-
-    @include desktop {
-        width: 100%;
-        flex-direction: row;
     }
 }

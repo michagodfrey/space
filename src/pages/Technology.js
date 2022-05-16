@@ -14,7 +14,7 @@ const Technology = () => {
         <h5>
           <b>03</b> space launch 101
         </h5>
-        <div className="technology__grid">
+        <div className="flexbox technology__content">
           <img className="technology__img" src={images.landscape} alt={name} />
           <div className="technology__btn-container">
             {technology.map((x, index) => {
@@ -31,7 +31,7 @@ const Technology = () => {
               );
             })}
           </div>
-          <div className="technology__text">
+          <div className="flex-item technology__text">
             <span>the terminology...</span>
             <h4>{name}</h4>
             <p>{description}</p>

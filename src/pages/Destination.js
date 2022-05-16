@@ -14,9 +14,9 @@ const Destination = () => {
         <h5>
           <b>01</b> pick your destination
         </h5>
-        <div className="destination__content">
+        <div className="flexbox destination__content">
           <img className="destination__img" src={images.webp} alt={name} />
-          <div className="destination__text">
+          <div className="flex-item destination__text">
             <div>
               {destinations.map((planet, index) => {
                 return (
@@ -35,12 +35,12 @@ const Destination = () => {
             <h2>{name}</h2>
             <p>{description}</p>
             <div className="destination__line"></div>
-            <div className="destination__footer">
-              <div className="destination__box">
+            <div className="flexbox destination__footer">
+              <div className="destination__footnote">
                 <span>avg. distance</span>
                 <h3>{distance}</h3>
               </div>
-              <div className="destination__box">
+              <div className="destination__footnote">
                 <span>est. travel time</span>
                 <h3>{travel}</h3>
               </div>
