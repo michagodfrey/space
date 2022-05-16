@@ -1,0 +1,118 @@
+/* =================================================
+  technology
+==================================================== */
+
+.technology {
+    height: 100%;
+    width: 100%;
+    background-image: url("../public/assets/technology/background-technology-mobile.jpg");
+    background-size: cover;
+}
+
+.technology__grid {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.technology__img {
+    width: 100%;
+    height: 170px;
+    margin-top: 2rem;
+    grid-area: img;
+}
+
+.technology__btn-container {
+    margin: 2rem 0;
+    grid-area: btns;
+}
+
+.technology__btn {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: .5rem;
+    margin: 0 .5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.technology__btn--active {
+    color: #0B0D17;
+    background-color: #fff;
+}
+
+.technology__text {
+    text-align: center;
+    padding: 1.5rem;
+    grid-area: txt;
+}
+
+@media (min-width: 768px) {
+    /* technology */
+    
+        .technology {
+            background-image: url("../public/assets/technology/background-technology-tablet.jpg");
+        }
+    
+        .technology h5 {
+            align-self: flex-start;
+            margin-left: 2.5rem;
+        }
+    
+        .technology__img {
+            height: 310px;
+        }
+    
+        .technology__btn-container {
+            margin: 3.5rem 0;
+        }
+    
+        .technology__btn {
+            height: 58px;
+            width: 58px;
+        }
+    
+        .technology h4 {
+            font-size: 2.5rem;
+        }
+    
+        .technology__text {
+            padding: 0 9.75em;
+        }
+}
+
+@media (min-width: 1024px) {
+    /* technology */
+    
+        .technology {
+            height: 100vh;
+            background-image: url("../public/assets/technology/background-technology-desktop.jpg");
+        }
+    
+        .technology__grid {
+            display: grid;
+            grid-template-columns: 20%;
+            grid-template-areas:
+                "btns txt img img img";
+        }
+    
+        .technology__text {
+            padding: 0;
+        }
+    
+        .technology__img {
+            width: 515px;
+            height: 527px;
+            margin: 0;
+        }
+    
+        .technology__btn-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+}

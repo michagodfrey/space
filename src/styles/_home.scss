@@ -1,0 +1,66 @@
+/* =================================================
+  home page
+==================================================== */
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../public/assets/home/background-home-mobile.jpg");
+    background-size: cover;
+
+    h5 {
+        color: #D0D6F9;
+        }
+
+    p {
+        font-size: 15px;
+    }
+
+    @include tablet {
+        background-image: url("../public/assets/home/background-home-tablet.jpg");
+    }
+
+    @include desktop {
+        background-image: url("../public/assets/home/background-home-desktop.jpg");
+        padding-top: 2.5rem;
+    }
+}
+
+.home__explore {
+    height: 150px;
+    width: 150px;
+    font-family: 'Bellefair', serif;
+    font-size: 1.25rem;
+    color: #0B0D17;
+    background-color: #fff;
+    border-radius: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    display: grid;
+    place-content: center;
+
+    @include tablet {
+        height: 242px;
+        width: 242px;
+        font-size: 2rem;
+        line-height: 2.25rem;
+        letter-spacing: 3.375;
+    }
+
+    @include desktop {
+        height: 274px;
+        width: 274px;
+    }
+}
+
+
+.home__content {
+    @include tablet {
+        justify-content: space-evenly;
+    }
+
+    @include desktop {
+        width: 100%;
+        flex-direction: row;
+    }
+}
