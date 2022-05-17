@@ -4,26 +4,26 @@ import { Link } from "react-router-dom";
 const Navbar = ({openSidebar}) => {
   return (
     <>
-      <button className="sidebar__btn" onClick={openSidebar}></button>
+      <button className="sidebar-btn" onClick={openSidebar}></button>
       <ul className="navbar">
         <Link to="/">
           <li className="navbar__link">
-            <b className="navbar__n">01</b> home
+            <b>01</b> home
           </li>
         </Link>
         <Link to="/destination">
           <li className="navbar__link">
-            <b className="navbar__n">02</b> destination
+            <b>02</b> destination
           </li>
         </Link>
         <Link to="/crew">
           <li className="navbar__link">
-            <b className="navbar__n">03</b> crew
+            <b>03</b> crew
           </li>
         </Link>
         <Link to="/technology">
           <li className="navbar__link">
-            <b className="navbar__n">04</b> technology
+            <b>04</b> technology
           </li>
         </Link>
       </ul>

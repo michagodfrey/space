@@ -61,8 +61,13 @@
 .destination__btn {
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
-    padding: .5rem;
+    padding: .5rem 0;
+    margin: 0 .5rem;
     border: none;
+
+    &:hover {
+        box-shadow: 0 2px #D0D6F9;
+    }
 }
 
 .destination__btn--active {
