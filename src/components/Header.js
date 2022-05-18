@@ -21,7 +21,7 @@ const Header = () => {
       </Link>
       <div className="header__line"></div>
       <Navbar openSidebar={openSidebar} />
-      <Sidebar closeSidebar={closeSidebar} isSidebarOpen={isSidebarOpen}  />
+      {/* <Sidebar closeSidebar={closeSidebar} isSidebarOpen={isSidebarOpen}  /> */}
     </header>
   );
 }

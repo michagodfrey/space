@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
+  
   return (
     <aside className={`${isSidebarOpen ? 'sidebar sidebar--active' : 'sidebar'}`}>
       <button className ="sidebar__close-btn" onClick={closeSidebar}></button>
