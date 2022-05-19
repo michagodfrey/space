@@ -4,40 +4,73 @@
 
 .destination {
     min-height: 100vh;
-    width: 100%;
     background-image: url("../public/assets/destination/background-destination-mobile.jpg");
     background-size: cover;
+    background-repeat: repeat;
 
     h5 {
         text-align: center;
 
         @include tablet {
             text-align: left;
+            margin: 0 0 0 2rem;
+        }
+
+        @include desktop {
+            margin: 0 0 0 10rem
+        }
+    }
+
+    h2 {
+        @include desktop {
+            margin: 2rem 0 0;
+        }
+    }
+
+    p {
+        @include tablet {
+            max-width: 572px;
+        }
+
+        @include desktop {
+            margin: 1rem 0;
+            max-width: 450px;
+        }
+    }
+
+    main {
+
+        padding: 88px 0 0;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        @include desktop {
+            margin: 3.25rem 0 0;
         }
     }
 
     @include tablet {
+        padding: 8.5rem 0 0;
         background-image: url("../public/assets/destination/background-destination-tablet.jpg");
     }
 
     @include desktop {
-        height: 100vh;
         background-image: url("../public/assets/destination/background-destination-desktop.jpg");
     }
 }
 
-.grid {
-    @include desktop {
-        display: grid;
-        place-content: center;
-    }
-}
-
 .destination__content {
+
+    @include tablet {
+        padding: 1.75rem 0 0;
+    }
+    
     @include desktop {
         flex-direction: row;
-        justify-content: space-evenly;
-        height: 100%;
+        justify-content: space-around;
+        align-items: flex-end;
     }
 }
 

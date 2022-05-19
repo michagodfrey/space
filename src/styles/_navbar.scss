@@ -19,6 +19,21 @@
     }
 }
 
+.navbar__line {
+    width: 0;
+    height: 1px;
+    background-color: #383B4B;
+
+    @include desktop {
+        // margin: 2rem 10.5rem;
+        // min-width: 350px;
+        // width: calc(250px + 100vw - 1024px);
+        max-width: 446px;
+        // position: absolute;
+        // left: 100;
+    }
+}
+
 .navbar__link {
     font-family: 'Barlow Condensed', sans-serif;
     text-transform: uppercase;

@@ -3,8 +3,7 @@
 ==================================================== */
 
 .technology {
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
     background-image: url("../public/assets/technology/background-technology-mobile.jpg");
     background-size: cover;
 
@@ -19,6 +18,15 @@
 
         @include tablet {
             text-align: left;
+            margin: 0 0 0 2rem;
+        }
+    }
+
+    main {
+        padding: 88px 0 0;
+
+        @include tablet {
+            padding: 128px 0 0;
         }
     }
 
@@ -27,7 +35,6 @@
     }
 
     @include desktop {
-        height: 100vh;
         background-image: url("../public/assets/technology/background-technology-desktop.jpg");
     }
 }
@@ -59,11 +66,11 @@
 }
 
 .technology__btn-container {
-    margin: 2rem 0;
+    margin: 2rem 0 0;
     grid-area: btns;
 
     @include tablet {
-        margin: 3.5rem 0;
+        margin: 3.5rem 0 1.25rem;
     }
 
     @include desktop {

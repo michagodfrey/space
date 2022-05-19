@@ -3,18 +3,9 @@
 ==================================================== */
 
 .home {
-    min-height: 100%;
-    width: 100%;
+    min-height: 100vh;
     background-image: url("../public/assets/home/background-home-mobile.jpg");
     background-size: cover;
-
-    h5 {
-        color: #D0D6F9;
-        }
-
-    p {
-        font-size: 15px;
-    }
 
     @include tablet {
         background-image: url("../public/assets/home/background-home-tablet.jpg");
@@ -27,14 +18,34 @@
 
 .home__content {
 
+    min-height: 100vh;
+    padding: 88px 0 0;
+
+    h5 {
+            color: #D0D6F9;
+        }
+
+    p {
+        @include tablet {
+            line-height: 175%;
+        }
+    }
+
     @include tablet {
+        padding: 0;
+        margin: 5.125rem 0 0;
         justify-content: space-evenly;
     }
 
     @include desktop {
         width: 100%;
         flex-direction: row;
-    }
+        justify-content: space-around;    
+        align-items: flex-end;
+        margin: 0;
+        padding: 0 0 6.75rem;
+    }   
+
 }
 
 .home__explore {

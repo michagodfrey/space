@@ -9,13 +9,10 @@
 }
 
 body {
-    
+    width: 100%;
+    min-height: 100vh;
     color: #fff;
     background-color: #0B0D17;
-}
-
-main {
-    height: 100vh;
 }
 
 .flexbox {  
@@ -39,23 +36,4 @@ main {
 
 @mixin desktop {
     @media (min-width: 1024px) { @content; }
-}
-
-
-/* =================================================
-  test
-==================================================== */
-
-html {
-    height: 100%;
-}
-
-body {
-    min-height: 100%;
-    border: 1px solid red;
-}
-
-.grid {
-    display: grid;
-    place-content: center;
 }

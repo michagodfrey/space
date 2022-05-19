@@ -3,8 +3,7 @@
 ==================================================== */
 
 .crew {
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
     background-image: url("../public/assets/crew/background-crew-mobile.jpg");
     background-size: cover;
 
@@ -13,7 +12,16 @@
 
         @include tablet {
                 text-align: left;
+                margin: 0 0 0 2rem;
             }
+    }
+
+    main {
+        padding: 88px 0 0;
+
+        @include tablet {
+            padding: 128px 0 0;
+        }
     }
 
     @include tablet {
@@ -26,13 +34,14 @@
 }
 
 .crew__content {
+
     @include tablet {
         flex-direction: column-reverse;
     }
 
     @include desktop {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "txt-c img-c"
             "btns-c img-c"
@@ -41,13 +50,20 @@
 }
 
 .crew__img {
-    width: 66%;
-    height: 280px;
+    width: auto;
+    height: 222px;
     margin-top: 2rem;
     grid-area: img-c;
-
+    
     @include tablet {
         height: 572px;
+    }
+
+    @include desktop {
+        height: 712px;
+        // position: absolute;
+        // bottom: 0;
+        // right: 150px;
     }
 }
 
@@ -63,9 +79,16 @@
 
 .crew__btn-container {
     grid-area: btns-c;
+
+    @include desktop {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .crew__btn {
+    // design style is height and width of 10px but I think that's too small
     height: 20px;
     width: 20px;
     border: none;
@@ -75,6 +98,7 @@
     background-color: #fff;
     opacity: .17;
 
+    
     &:hover {
         opacity: 1;
         background-color: #D0D6F9;
@@ -87,4 +111,10 @@
 
 .crew__text {
     grid-area: txt-c;
+
+    @include desktop {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

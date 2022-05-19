@@ -25,6 +25,7 @@ const Navbar = ({openSidebar}) => {
       <button className="sidebar-btn" onClick={openSidebar}></button>
 
       <ul className="navbar">
+        <div className="navbar__line"></div>
         {/* {display.pages.map((page, index) => {
           return (
             <div key={index} className={toggleActive(index)} onClick={() => {togglePage(index)}}>link</div>

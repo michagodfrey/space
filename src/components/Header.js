@@ -19,9 +19,8 @@ const Header = () => {
       <Link to="/">
         <div className="header__logo"></div>
       </Link>
-      <div className="header__line"></div>
       <Navbar openSidebar={openSidebar} />
-      {/* <Sidebar closeSidebar={closeSidebar} isSidebarOpen={isSidebarOpen}  /> */}
+      <Sidebar closeSidebar={closeSidebar} isSidebarOpen={isSidebarOpen}  />
     </header>
   );
 }
