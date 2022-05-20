@@ -4,7 +4,7 @@
 
 .destination {
     min-height: 100vh;
-    background-image: url("../public/assets/destination/background-destination-mobile.jpg");
+    background-image: url("/assets/destination/background-destination-mobile.jpg");
     background-size: cover;
     background-repeat: repeat;
 
@@ -53,11 +53,11 @@
 
     @include tablet {
         padding: 8.5rem 0 0;
-        background-image: url("../public/assets/destination/background-destination-tablet.jpg");
+        background-image: url("/assets/destination/background-destination-tablet.jpg");
     }
 
     @include desktop {
-        background-image: url("../public/assets/destination/background-destination-desktop.jpg");
+        background-image: url("/assets/destination/background-destination-desktop.jpg");
     }
 }
 

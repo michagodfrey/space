@@ -5,7 +5,6 @@ import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 import Error from "./pages/Error";
-import Test from "./pages/Test";
 
 const App = () => {
   return (
@@ -16,9 +15,6 @@ const App = () => {
         <Route path="/crew" element={<Crew />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="*" element={<Error />} />
-        {/* delete before FEM submission */}
-        <Route path="test" element={<Test />} />
-        {/* as above */}
       </Routes>
     </BrowserRouter>
   );

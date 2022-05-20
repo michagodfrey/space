@@ -13,7 +13,7 @@
     background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(15px);
     transform: translateX(100%);
-    transition: all 0.3s linear;
+    transition: width translate 0.3s linear;
     overflow: hidden;
     z-index: 1;
 
@@ -34,7 +34,7 @@
 .sidebar__close-btn {
     width: 1.5rem;
     height: 1.5rem;
-    background-image: url("../public/assets/shared/icon-close.svg");
+    background-image: url("/assets/shared/icon-close.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

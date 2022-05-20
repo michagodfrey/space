@@ -4,15 +4,15 @@
 
 .home {
     min-height: 100vh;
-    background-image: url("../public/assets/home/background-home-mobile.jpg");
+    background-image: url("/assets/home/background-home-mobile.jpg");
     background-size: cover;
 
     @include tablet {
-        background-image: url("../public/assets/home/background-home-tablet.jpg");
+        background-image: url("/assets/home/background-home-tablet.jpg");
     }
 
     @include desktop {
-        background-image: url("../public/assets/home/background-home-desktop.jpg");
+        background-image: url("/assets/home/background-home-desktop.jpg");
     }
 }
 

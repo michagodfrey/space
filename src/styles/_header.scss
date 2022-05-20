@@ -21,7 +21,7 @@ header {
     height: 40px;
     margin: 1.5rem;
     cursor: pointer;
-    background-image: url("../public/assets/shared/logo.svg");
+    background-image: url("/assets/shared/logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -33,3 +33,14 @@ header {
     }
 }
 
+.header__line {
+    width: 0;
+    height: 1px;
+    background-color: #383B4B;
+    position: absolute;
+
+    @include desktop {
+        right: 57%;
+        width: 30%;
+    }
+}

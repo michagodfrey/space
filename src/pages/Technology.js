@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import data from "../data.json";
+import { useMediaQuery } from "react-responsive";
 
 const Technology = () => {
   const [technology] = useState(data.technology);
   const [value, setValue] = useState(0);
   const { name, images, description } = technology[value];
+  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)'});
   
   return (
     <div className="technology">
@@ -15,7 +17,7 @@ const Technology = () => {
           <b>03</b> space launch 101
         </h5>
         <div className="flexbox technology__content">
-          <img className="technology__img" src={images.landscape} alt={name} />
+          <img className="technology__img" src={isDesktop ? images.portrait : images.landscape} alt={name} />
           <div className="technology__btn-container">
             {technology.map((x, index) => {
               return (
