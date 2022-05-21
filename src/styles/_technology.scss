@@ -1,17 +1,7 @@
-/* =================================================
-  technology
-==================================================== */
-
 .technology {
     min-height: 100vh;
     background-image: url("/assets/technology/background-technology-mobile.jpg");
     background-size: cover;
-
-    h4 {
-        @include tablet {
-            font-size: 2.5rem;
-        }
-    }
 
     h5 {
         text-align: center;
@@ -20,6 +10,11 @@
             text-align: left;
             margin: 0 0 0 2rem;
         }
+
+        @include desktop {
+            margin: 0 0 0 10rem;
+            transform: translateY(-1.5rem);
+        }
     }
 
     main {
@@ -27,6 +22,10 @@
 
         @include tablet {
             padding: 128px 0 0;
+        }
+
+        @include desktop {
+            padding: 18% 0 0;
         }
     }
 
@@ -42,42 +41,43 @@
 .technology__content {
     @include desktop {
         display: grid;
-        grid-template-columns: 20%;
+        grid-template-columns: 20% 40% 40%;
         grid-template-areas:
-            "btns txt img img img";
+            "btns-t txt-t img-t";
     }
 }
 
 .technology__img {
     width: 100%;
-    height: 170px;
-    margin-top: 2rem;
-    grid-area: img;
+    min-height: 170px;
+    margin: 2rem 0 0;
+    grid-area: img-t;
 
     @include tablet {
-        height: 310px;
+        min-height: 310px;
     }
 
     @include desktop {
         width: 515px;
         height: 527px;
-        margin: 0;
+        margin: 0 calc(40vw - 515px);
     }
 }
 
 .technology__btn-container {
     margin: 2rem 0 0;
-    grid-area: btns;
+    grid-area: btns-t;
 
     @include tablet {
         margin: 3.5rem 0 1.25rem;
     }
 
     @include desktop {
+        margin: 0 3.5rem 0;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        justify-content: space-evenly;
+        align-items: flex-end;
+        transform: translateY(-1rem);
     }
 }
 
@@ -99,6 +99,14 @@
     @include tablet {
         height: 58px;
         width: 58px;
+        font-size: 1.5rem;
+    }
+
+    @include desktop {
+        height: 80px;
+        width: 80px;
+        margin: 0 0 2rem 0;
+        font-size: 2rem;
     }
 }
 
@@ -108,5 +116,9 @@
 }
 
 .technology__text {
-    grid-area: txt;
+    grid-area: txt-t;
+
+    @include desktop {
+        text-align: left;
+    }
 }

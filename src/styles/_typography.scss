@@ -43,6 +43,7 @@ h2 {
     line-height: 64px;
 
     @include tablet {
+        margin: 2rem 0 0;
         font-size: 80px;
         line-height: 92px;
     }
@@ -53,7 +54,7 @@ h2 {
     }
 }
 
-/* av distance and travel time */
+/* destination distance and travel time */
 h3 {
     font-family: 'Bellefair', serif;
     text-transform: uppercase;
@@ -61,7 +62,7 @@ h3 {
     margin: .75rem 0;
 }
 
-/* crew and tech names */
+/* crew and technology names */
 h4 {
     font-family: 'Bellefair', serif;
     text-transform: uppercase;
@@ -131,7 +132,7 @@ h6 {
     }
 }
 
-/* destination nav links and subheadings for av dist/travel */
+/* intra-page nav links and subheadings for dist/travel */
 span {
     font-family: 'Barlow Condensed', sans-serif;
     font-size: .875rem;

@@ -338,9 +338,6 @@ template {
   display: none;
 }
 
-/* =================================================
-  base elements
-==================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -365,9 +362,6 @@ body {
   padding: 1.5rem;
 }
 
-/* =================================================
-  media query mixins
-==================================================== */
 a {
   text-decoration: none;
 }
@@ -417,6 +411,7 @@ h2 {
 
 @media (min-width: 768px) {
   h2 {
+    margin: 2rem 0 0;
     font-size: 80px;
     line-height: 92px;
   }
@@ -429,7 +424,7 @@ h2 {
   }
 }
 
-/* av distance and travel time */
+/* destination distance and travel time */
 h3 {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
@@ -437,7 +432,7 @@ h3 {
   margin: .75rem 0;
 }
 
-/* crew and tech names */
+/* crew and technology names */
 h4 {
   font-family: 'Bellefair', serif;
   text-transform: uppercase;
@@ -519,7 +514,7 @@ h6 {
   }
 }
 
-/* destination nav links and subheadings for av dist/travel */
+/* intra-page nav links and subheadings for dist/travel */
 span {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: .875rem;
@@ -562,9 +557,6 @@ p {
   }
 }
 
-/* =================================================
-  header
-==================================================== */
 header {
   position: absolute;
   top: 0;
@@ -614,9 +606,6 @@ header {
   }
 }
 
-/* =================================================
-  navbar
-==================================================== */
 .navbar {
   display: none;
 }
@@ -683,9 +672,6 @@ header {
   }
 }
 
-/* =================================================
-  sidebar
-==================================================== */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -696,8 +682,8 @@ header {
   width: 0;
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(15px);
-  transform: translateX(100%);
-  transition: width translate 0.3s linear;
+  transform: translate(100%);
+  transition: all 0.3s linear;
   overflow: hidden;
   z-index: 1;
 }
@@ -714,7 +700,7 @@ header {
 
 .sidebar--active {
   width: 67%;
-  transform: translateX(0);
+  transform: translate(0);
 }
 
 .sidebar__close-btn {
@@ -741,9 +727,6 @@ header {
   margin: 0 0 2rem 2rem;
 }
 
-/* =================================================
-  home page
-==================================================== */
 .home {
   min-height: 100vh;
   background-image: url("/assets/home/background-home-mobile.jpg");
@@ -765,6 +748,7 @@ header {
 .home__content {
   min-height: 100vh;
   padding: 88px 0 0;
+  justify-content: space-between;
 }
 
 .home__content h5 {
@@ -799,6 +783,7 @@ header {
 .home__explore {
   height: 150px;
   width: 150px;
+  margin: 0 0 1.25rem 0;
   font-family: 'Bellefair', serif;
   font-size: 1.25rem;
   color: #0B0D17;
@@ -841,9 +826,6 @@ header {
   }
 }
 
-/* =================================================
-  crew
-==================================================== */
 .crew {
   min-height: 100vh;
   background-image: url("/assets/crew/background-crew-mobile.jpg");
@@ -858,6 +840,12 @@ header {
   .crew h5 {
     text-align: left;
     margin: 0 0 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .crew h5 {
+    margin: 4.75rem 0 0 10rem;
   }
 }
 
@@ -891,8 +879,11 @@ header {
 
 @media (min-width: 1024px) {
   .crew__content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60% 40%;
     grid-template-areas: "txt-c img-c" "btns-c img-c";
   }
 }
@@ -912,7 +903,8 @@ header {
 
 @media (min-width: 1024px) {
   .crew__img {
-    height: 712px;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
@@ -934,9 +926,7 @@ header {
 
 @media (min-width: 1024px) {
   .crew__btn-container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10rem;
   }
 }
 
@@ -966,15 +956,11 @@ header {
 
 @media (min-width: 1024px) {
   .crew__text {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 0 0 8.5rem;
+    transform: translateY(5rem);
   }
 }
 
-/* =================================================
-  destination
-==================================================== */
 .destination {
   min-height: 100vh;
   background-image: url("/assets/destination/background-destination-mobile.jpg");
@@ -1127,19 +1113,10 @@ header {
   }
 }
 
-/* =================================================
-  technology
-==================================================== */
 .technology {
   min-height: 100vh;
   background-image: url("/assets/technology/background-technology-mobile.jpg");
   background-size: cover;
-}
-
-@media (min-width: 768px) {
-  .technology h4 {
-    font-size: 2.5rem;
-  }
 }
 
 .technology h5 {
@@ -1153,6 +1130,13 @@ header {
   }
 }
 
+@media (min-width: 1024px) {
+  .technology h5 {
+    margin: 0 0 0 10rem;
+    transform: translateY(-1.5rem);
+  }
+}
+
 .technology main {
   padding: 88px 0 0;
 }
@@ -1160,6 +1144,12 @@ header {
 @media (min-width: 768px) {
   .technology main {
     padding: 128px 0 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .technology main {
+    padding: 18% 0 0;
   }
 }
 
@@ -1178,21 +1168,21 @@ header {
 @media (min-width: 1024px) {
   .technology__content {
     display: grid;
-    grid-template-columns: 20%;
-    grid-template-areas: "btns txt img img img";
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas: "btns-t txt-t img-t";
   }
 }
 
 .technology__img {
   width: 100%;
-  height: 170px;
-  margin-top: 2rem;
-  grid-area: img;
+  min-height: 170px;
+  margin: 2rem 0 0;
+  grid-area: img-t;
 }
 
 @media (min-width: 768px) {
   .technology__img {
-    height: 310px;
+    min-height: 310px;
   }
 }
 
@@ -1200,13 +1190,13 @@ header {
   .technology__img {
     width: 515px;
     height: 527px;
-    margin: 0;
+    margin: 0 calc(40vw - 515px);
   }
 }
 
 .technology__btn-container {
   margin: 2rem 0 0;
-  grid-area: btns;
+  grid-area: btns-t;
 }
 
 @media (min-width: 768px) {
@@ -1217,10 +1207,11 @@ header {
 
 @media (min-width: 1024px) {
   .technology__btn-container {
+    margin: 0 3.5rem 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
+    align-items: flex-end;
+    transform: translateY(-1rem);
   }
 }
 
@@ -1244,6 +1235,16 @@ header {
   .technology__btn {
     height: 58px;
     width: 58px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .technology__btn {
+    height: 80px;
+    width: 80px;
+    margin: 0 0 2rem 0;
+    font-size: 2rem;
   }
 }
 
@@ -1253,5 +1254,11 @@ header {
 }
 
 .technology__text {
-  grid-area: txt;
+  grid-area: txt-t;
+}
+
+@media (min-width: 1024px) {
+  .technology__text {
+    text-align: left;
+  }
 }
