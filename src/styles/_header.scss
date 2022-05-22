@@ -17,7 +17,7 @@ header {
     height: 40px;
     margin: 1.5rem;
     cursor: pointer;
-    background-image: url("./assets/shared/logo.svg");
+    background-image: url("%PUBLIC_URL%/assets/shared/logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
