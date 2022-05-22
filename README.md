@@ -33,19 +33,19 @@ Users should be able to:
 
 #### Home page on desktop screen
 
-![desktop view](./screenshots/home-screen-desktop.jpg)
+![desktop view](./screenshots/home-screen-desktop.png)
 
 #### Destination page on tablet screen
 
-![tablet view](./screenshots/destination-screen-tablet.jpg)
+![tablet view](./screenshots/destination-screen-tablet.png)
 
 #### Crew page on mobile screen
 
-![mobile view](./screenshots/crew-screen-mobile.jpg)
+![mobile view](./screenshots/crew-screen-mobile.png)
 
 #### Sidebar view
 
-![sidebar view](./screenshots/sidebar-screen.jpg)
+![sidebar view](./screenshots/sidebar-screen.png)
 
 ### Links
 
