@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header>
-      <Link to="/">
+      <Link to="/space">
         <div className="header__logo"></div>
       </Link>
       <div className="header__line"></div>

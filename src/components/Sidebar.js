@@ -7,24 +7,24 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
     <aside className={`${isSidebarOpen ? 'sidebar sidebar--active' : 'sidebar'}`}>
       <button className ="sidebar__close-btn" onClick={closeSidebar}></button>
       <ul>
-        <Link to="/">
+        <Link to="/space">
           <li className="sidebar__link">
-            <b>01</b> home
+            <b>00</b> home
           </li>
         </Link>
         <Link to="/destination">
           <li className="sidebar__link">
-            <b>02</b> destination
+            <b>01</b> destination
           </li>
         </Link>
         <Link to="/crew">
           <li className="sidebar__link">
-            <b>03</b> crew
+            <b>02</b> crew
           </li>
         </Link>
         <Link to="/technology">
           <li className="sidebar__link">
-            <b>04</b> technology
+            <b>03</b> technology
           </li>
         </Link>
       </ul>

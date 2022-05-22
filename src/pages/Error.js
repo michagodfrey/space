@@ -9,7 +9,7 @@ const Error = () => {
           <h5>oh no, looks like that page is lost in space</h5>
         </div>
         <div className="flex-item">
-          <Link to="/">
+          <Link to="/space">
             <span>back home</span>
           </Link>
         </div>
