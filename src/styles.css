@@ -579,7 +579,7 @@ header {
   height: 40px;
   margin: 1.5rem;
   cursor: pointer;
-  background-image: url("/assets/shared/logo.svg");
+  background-image: url("./assets/shared/logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -612,18 +612,6 @@ header {
   display: none;
 }
 
-.navbar b {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .navbar b {
-    display: inline;
-    color: #fff;
-    opacity: 1;
-  }
-}
-
 @media (min-width: 768px) {
   .navbar {
     display: flex;
@@ -635,6 +623,18 @@ header {
     background-color: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(80px);
+  }
+}
+
+.navbar b {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar b {
+    display: inline;
+    color: #fff;
+    opacity: 1;
   }
 }
 
@@ -668,7 +668,7 @@ header {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  background-image: url("/assets/shared/icon-hamburger.svg");
+  background-image: url("./assets/shared/icon-hamburger.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -696,14 +696,14 @@ header {
   z-index: 1;
 }
 
-.sidebar b {
-  opacity: 1;
-}
-
 @media (min-width: 768px) {
   .sidebar {
     display: none;
   }
+}
+
+.sidebar b {
+  opacity: 1;
 }
 
 .sidebar--active {
@@ -714,7 +714,7 @@ header {
 .sidebar__close-btn {
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url("/assets/shared/icon-close.svg");
+  background-image: url("./assets/shared/icon-close.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -737,19 +737,19 @@ header {
 
 .home {
   min-height: 100vh;
-  background-image: url("/assets/home/background-home-mobile.jpg");
+  background-image: url("./assets/home/background-home-mobile.jpg");
   background-size: cover;
 }
 
 @media (min-width: 768px) {
   .home {
-    background-image: url("/assets/home/background-home-tablet.jpg");
+    background-image: url("./assets/home/background-home-tablet.jpg");
   }
 }
 
 @media (min-width: 1024px) {
   .home {
-    background-image: url("/assets/home/background-home-desktop.jpg");
+    background-image: url("./assets/home/background-home-desktop.jpg");
   }
 }
 
@@ -757,10 +757,6 @@ header {
   min-height: 100vh;
   padding: 88px 0 0;
   justify-content: space-between;
-}
-
-.home__content h5 {
-  color: #D0D6F9;
 }
 
 @media (min-width: 768px) {
@@ -780,6 +776,10 @@ header {
     margin: 0;
     padding: 0 9.8% 7.5%;
   }
+}
+
+.home__content h5 {
+  color: #D0D6F9;
 }
 
 .home__explore {
@@ -831,8 +831,20 @@ header {
 
 .crew {
   min-height: 100vh;
-  background-image: url("/assets/crew/background-crew-mobile.jpg");
+  background-image: url("./assets/crew/background-crew-mobile.jpg");
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .crew {
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .crew {
+    background-image: url("./assets/crew/background-crew-desktop.jpg");
+  }
 }
 
 .crew h5 {
@@ -872,18 +884,6 @@ header {
 @media (min-width: 768px) {
   .crew main {
     padding: 128px 0 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .crew {
-    background-image: url("/assets/crew/background-crew-tablet.jpg");
-  }
-}
-
-@media (min-width: 1024px) {
-  .crew {
-    background-image: url("/assets/crew/background-crew-desktop.jpg");
   }
 }
 
@@ -979,9 +979,22 @@ header {
 
 .destination {
   min-height: 100vh;
-  background-image: url("/assets/destination/background-destination-mobile.jpg");
+  background-image: url("./assets/destination/background-destination-mobile.jpg");
   background-size: cover;
   background-repeat: repeat;
+}
+
+@media (min-width: 768px) {
+  .destination {
+    padding: 8.5rem 0 0;
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .destination {
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+  }
 }
 
 .destination h5 {
@@ -1039,19 +1052,6 @@ header {
 @media (min-width: 1024px) {
   .destination main {
     margin: 3.25rem 0 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .destination {
-    padding: 8.5rem 0 0;
-    background-image: url("/assets/destination/background-destination-tablet.jpg");
-  }
-}
-
-@media (min-width: 1024px) {
-  .destination {
-    background-image: url("/assets/destination/background-destination-desktop.jpg");
   }
 }
 
@@ -1137,8 +1137,20 @@ header {
 
 .technology {
   min-height: 100vh;
-  background-image: url("/assets/technology/background-technology-mobile.jpg");
+  background-image: url("./assets/technology/background-technology-mobile.jpg");
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .technology {
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .technology {
+    background-image: url("./assets/technology/background-technology-desktop.jpg");
+  }
 }
 
 .technology h5 {
@@ -1178,18 +1190,6 @@ header {
 @media (min-width: 1024px) {
   .technology main {
     padding: 18% 0 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .technology {
-    background-image: url("/assets/technology/background-technology-tablet.jpg");
-  }
-}
-
-@media (min-width: 1024px) {
-  .technology {
-    background-image: url("/assets/technology/background-technology-desktop.jpg");
   }
 }
 

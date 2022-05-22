@@ -23,7 +23,7 @@ const Destination = () => {
           <motion.img
             className="destination__img"
             src={images.webp}
-            alt={name}
+            alt={images.png}
             initial={{ x: "-30vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}

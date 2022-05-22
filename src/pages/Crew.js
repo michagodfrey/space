@@ -25,7 +25,7 @@ const Crew = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <img className="crew__img" src={images.webp} alt={name} />
+          <img className="crew__img" src={images.webp} alt={images.png} />
           <div className="crew__line"></div>
           <div className="crew__btn-container">
             {crew.map((x, index) => {
