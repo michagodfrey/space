@@ -16,6 +16,18 @@
         }
     }
 
+    p {
+
+        @include tablet {
+            min-height: 168px;
+        }
+
+        @include desktop {
+            max-width: 445px;
+            min-height: 160px;
+        }
+    }
+
     main {
         padding: 88px 0 0;
 
@@ -44,7 +56,7 @@
         width: 100%;
         bottom: 0;
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 57% 43%;
         grid-template-areas:
             "txt-c img-c"
             "btns-c img-c"
@@ -64,7 +76,7 @@
 
     @include desktop {
         height: auto;
-        margin: 0 auto;
+        max-height: 602px;
     }
 }
 
@@ -82,7 +94,7 @@
     grid-area: btns-c;
 
     @include desktop {
-        margin-left: 10rem;
+        margin: 0 0 3rem 10rem;
     }
 }
 
@@ -97,7 +109,6 @@
     background-color: #fff;
     opacity: .17;
 
-    
     &:hover {
         opacity: 1;
         background-color: #D0D6F9;

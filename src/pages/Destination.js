@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from "../components/Header";
 import data from "../data.json";
+import { motion } from 'framer-motion';
 
 const Destination = () => {
   const [destinations] = useState(data.destinations);
@@ -11,12 +12,28 @@ const Destination = () => {
     <div className="destination">
       <Header />
       <main>
-        <h5>
+        <motion.h5
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .8, duration: 1 }}
+        >
           <b>01</b> pick your destination
-        </h5>
+        </motion.h5>
         <div className="flexbox destination__content">
-          <img className="destination__img" src={images.webp} alt={name} />
-          <div className="flex-item destination__text">
+          <motion.img
+            className="destination__img"
+            src={images.webp}
+            alt={name}
+            initial={{ x: "-30vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          />
+          <motion.div
+            className="flex-item destination__text"
+            initial={{ x: "30vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          >
             <div>
               {destinations.map((planet, index) => {
                 return (
@@ -45,7 +62,7 @@ const Destination = () => {
                 <h3>{travel}</h3>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </main>
     </div>

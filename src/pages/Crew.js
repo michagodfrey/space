@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from "../components/Header";
 import data from "../data.json";
+import { motion } from "framer-motion";
 
 const Crew = () => {
   const [crew] = useState(data.crew);
@@ -11,13 +12,22 @@ const Crew = () => {
     <div className="crew">
       <Header />
       <main>
-        <h5>
+        <motion.h5
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 1 }}
+        >
           <b>02</b> meet your crew
-        </h5>
-        <div className='flexbox crew__content'>
+        </motion.h5>
+        <motion.div
+          className="flexbox crew__content"
+          initial={{ y: "50vh", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
           <img className="crew__img" src={images.webp} alt={name} />
           <div className="crew__line"></div>
-          <div className='crew__btn-container'>
+          <div className="crew__btn-container">
             {crew.map((x, index) => {
               return (
                 <button
@@ -35,7 +45,7 @@ const Crew = () => {
             <h4>{name}</h4>
             <p>{bio}</p>
           </div>
-        </div>
+        </motion.div>
       </main>
     </div>
   );

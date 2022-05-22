@@ -19,13 +19,7 @@
     justify-content: space-between;
 
     h5 {
-            color: #D0D6F9;
-        }
-
-    p {
-        @include tablet {
-            line-height: 175%;
-        }
+        color: #D0D6F9;
     }
 
     @include tablet {
@@ -37,10 +31,10 @@
     @include desktop {
         width: 100%;
         flex-direction: row;
-        justify-content: space-around;    
+        justify-content: space-between;    
         align-items: flex-end;
         margin: 0;
-        padding: 0 0 6.75rem;
+        padding: 0 9.8% 7.5%;
     }   
 
 }
@@ -62,6 +56,7 @@
     @include tablet {
         height: 242px;
         width: 242px;
+        margin: 0;
         font-size: 2rem;
         line-height: 2.25rem;
         letter-spacing: 3.375;
@@ -72,13 +67,13 @@
         width: 274px;
     }
 
-        &:hover {
-            box-shadow: 0 0 0 5.5rem rgba(255, 255, 255, .1);
-            animation: pulse 1.5s infinite;
-        }
+    &:hover {
+        box-shadow: 0 0 0 5.5rem rgba(255, 255, 255, .1);
+        animation: pulse 1.5s infinite;
+    }
 }
 
-// pulse effect adapted from https: //www.florin-pop.com/blog/2019/03/css-pulse-effect/
+// pulse effect adapted from https://www.florin-pop.com/blog/2019/03/css-pulse-effect/
 
 @keyframes pulse {
 

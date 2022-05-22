@@ -24,13 +24,18 @@
     }
 
     p {
+
+        min-height: 125px;
+
         @include tablet {
+            min-height: 0;
             max-width: 572px;
         }
 
         @include desktop {
             margin: 1rem 0;
             max-width: 450px;
+            min-height: 192px;
         }
     }
 

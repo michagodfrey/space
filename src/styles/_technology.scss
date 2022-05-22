@@ -17,6 +17,12 @@
         }
     }
 
+    p {
+        @include desktop {
+            min-height: 256px;
+        }
+    }
+
     main {
         padding: 88px 0 0;
 
@@ -58,9 +64,9 @@
     }
 
     @include desktop {
-        width: 515px;
-        height: 527px;
-        margin: 0 calc(40vw - 515px);
+        max-width: 515px;
+        height: auto;
+        margin: 0 0 0 3.875rem;
     }
 }
 

@@ -1,6 +1,16 @@
 .navbar {
     display: none;
 
+    b {
+        display: none;
+
+        @include desktop {
+            display: inline;
+            color: #fff;
+            opacity: 1;
+        }
+    }
+
     @include tablet {
         display: flex;
         justify-content: space-evenly;
@@ -24,23 +34,19 @@
     padding: 2rem 0;
     
     &:hover {
-        box-shadow: 0 2px #D0D6F9;
-    }
-
-    b {
-        display: none;
-        
-        @include desktop {
-            display: inline;
-            color: #fff;
-            opacity: 1;
-        }
+        box-shadow: 0 3px rgba(255, 255, 255, 0.5);
     }
 
 }
 
 .navbar__link--active {
-    box-shadow: 0 2px #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    color: #fff;
+    padding: 2rem 0;
+    box-shadow: 0 3px #fff;
 }
 
 .sidebar-btn {

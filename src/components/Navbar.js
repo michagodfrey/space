@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { NavLink } from "react-router-dom";
 
 const Navbar = ({openSidebar}) => {
@@ -10,7 +10,7 @@ const Navbar = ({openSidebar}) => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "navbar__link navbar__link--active" : "navbar__link"
+            isActive ? "navbar__link--active" : "navbar__link"
           }
         >
           <li>
@@ -20,7 +20,7 @@ const Navbar = ({openSidebar}) => {
         <NavLink
           to="/destination"
           className={({ isActive }) =>
-            isActive ? "navbar__link navbar__link--active" : "navbar__link"
+            isActive ? "navbar__link--active" : "navbar__link"
           }
         >
           <li>
@@ -30,7 +30,7 @@ const Navbar = ({openSidebar}) => {
         <NavLink
           to="/crew"
           className={({ isActive }) =>
-            isActive ? "navbar__link navbar__link--active" : "navbar__link"
+            isActive ? "navbar__link--active" : "navbar__link"
           }
         >
           <li>
@@ -40,7 +40,7 @@ const Navbar = ({openSidebar}) => {
         <NavLink
           to="/technology"
           className={({ isActive }) =>
-            isActive ? "navbar__link navbar__link--active" : "navbar__link"
+            isActive ? "navbar__link--active" : "navbar__link"
           }
         >
           <li>
