@@ -65,9 +65,9 @@ Users should be able to:
 
 ### What I learned
 
-I got more confident installing npm packages and using them for specific effects. For example React Responsive to switch between a landscape and protrait image on mobile/tablet and desktop screen widths. And Framer Motion to add animations.
+I got more confident installing npm packages and using them for specific effects. For example React Responsive to switch between a landscape and protrait image on mobile/tablet and desktop screen widths. And Framer Motion to add animations. However, I had problems when I deployed the app on GitHub pages with the Routes and images. I had to change image url paths and make the home page '/space' rather than '/' because it conflicts with my GH pages user site. Still, refreshing a page on any page other than '/space' gives a 404 error, and not even my own project error message. From here I will focus on understanding React Router and client / server side routing.
 
-The cool glassy effect of the header and sidebar is achieved by a transparent background and backdrop-filter: blur(xxpx); Unfortunately it is not supported by Firefox at the time of creating this project.
+I also got more practice with sass and scss and tried mixins and key frames for the first time. Also the cool glassy effect of the header and sidebar is achieved by a transparent background and backdrop-filter: blur(xxpx); Unfortunately it is not supported by Firefox at the time of creating this project.
 
 ```css
   background-color: transparent;
@@ -75,7 +75,7 @@ The cool glassy effect of the header and sidebar is achieved by a transparent ba
 
 ```
 
-I'm happy with how React Responsive works. In this example, the desktop width is set and a simple ternary operator in the image source renders the appropriate image.
+React Responsive. I'm happy with how how it works and think it will come in handy in the future. In this example, the desktop width is set and a simple ternary operator in the image source renders the appropriate image.
 
 ```js
   import { useMediaQuery } from "react-responsive";
@@ -89,7 +89,7 @@ I'm happy with how React Responsive works. In this example, the desktop width is
 />
 ```
 
-Very impressed with how intuitive it is; after seeing a few examples I was adding cool animations to this project.
+Framer Motion. Very impressed with how intuitive it is; after seeing a few examples I was adding cool animations to this project.
 
 ```js
 import { motion } from 'framer-motion';
@@ -115,7 +115,7 @@ import { motion } from 'framer-motion';
 
 ### Continued development
 
-I have a lot to learn but this was great practice of React and I practiced new packages that I will implement in future projects.
+It would be good to add a loading animation and set up the Router better so a user can refresh a page without getting a 404.
 
 ### Useful resources
 
