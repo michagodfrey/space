@@ -27,8 +27,8 @@ const Crew = () => {
         >
           <img
             className="crew__img"
-            src={images.webp}
-            alt={images.png}
+            src={`/space${images.webp}`}
+            alt={name}
           />
           <div className="crew__line"></div>
           <div className="crew__btn-container">

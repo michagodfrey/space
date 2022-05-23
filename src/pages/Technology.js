@@ -29,7 +29,7 @@ const Technology = () => {
         >
           <img
             className="technology__img"
-            src={isDesktop ? images.portrait : images.landscape}
+            src={isDesktop ? `/space${images.portrait}` : `/space${images.landscape}`}
             alt={name}
           />
           <div className="technology__btn-container">
