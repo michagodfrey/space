@@ -22,8 +22,8 @@ const Destination = () => {
         <div className="flexbox destination__content">
           <motion.img
             className="destination__img"
-            src={images.webp}
-            alt={images.png}
+            src={`/space${images.webp}`}
+            alt={name}
             initial={{ x: "-30vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
