@@ -109,6 +109,10 @@
     background-color: #fff;
     opacity: .17;
 
+    @include desktop {
+        margin: 0 1.5rem 0 0;
+    }
+
     &:hover {
         opacity: 1;
         background-color: #D0D6F9;

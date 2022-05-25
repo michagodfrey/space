@@ -6,16 +6,14 @@ const Navbar = ({openSidebar}) => {
   return (
     <>
       <button className="sidebar-btn" onClick={openSidebar}></button>
-      <ul className="navbar">
+      <div className="navbar">
         <NavLink
           to="/space"
           className={({ isActive }) =>
             isActive ? "navbar__link--active" : "navbar__link"
           }
         >
-          <li>
-            <b>00</b> home
-          </li>
+          <b>00</b> home
         </NavLink>
         <NavLink
           to="/destination"
@@ -23,9 +21,7 @@ const Navbar = ({openSidebar}) => {
             isActive ? "navbar__link--active" : "navbar__link"
           }
         >
-          <li>
-            <b>01</b> destination
-          </li>
+          <b>01</b> destination
         </NavLink>
         <NavLink
           to="/crew"
@@ -33,9 +29,7 @@ const Navbar = ({openSidebar}) => {
             isActive ? "navbar__link--active" : "navbar__link"
           }
         >
-          <li>
-            <b>02</b> crew
-          </li>
+          <b>02</b> crew
         </NavLink>
         <NavLink
           to="/technology"
@@ -43,11 +37,9 @@ const Navbar = ({openSidebar}) => {
             isActive ? "navbar__link--active" : "navbar__link"
           }
         >
-          <li>
-            <b>03</b> technology
-          </li>
+          <b>03</b> technology
         </NavLink>
-      </ul>
+      </div>
     </>
   );
 }
