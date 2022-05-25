@@ -49,8 +49,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/space-tourism-website-built-with-react-and-sassscss-sijuaf2q55)
+- Live Site URL: [Live site](https://michagodfrey.github.io/space)
 
 ## My process
 
@@ -65,7 +65,11 @@ Users should be able to:
 
 ### What I learned
 
-I got more confident installing npm packages and using them for specific effects. For example React Responsive to switch between a landscape and protrait image on mobile/tablet and desktop screen widths. And Framer Motion to add animations. However, I had problems when I deployed the app on GitHub pages with the Routes and images. I had to change image url paths and make the home page '/space' rather than '/' because it conflicts with my GH pages user site. Still, refreshing a page on any page other than '/space' gives a 404 error, and not even my own project error message. From here I will focus on understanding React Router and client / server side routing.
+I got more confident installing npm packages and using them for specific effects. For example React Responsive to switch between a landscape and protrait image on mobile/tablet and desktop screen widths. And Framer Motion to add animations.
+
+However, I had problems when I deployed the app on GitHub pages with the Routes and images. I had to change image URL paths and make the home page '/space' rather than '/' because it conflicts with my GH pages user site.
+
+Something I only learned after publishing the site to GitHub Pages, was the limitation of BrowserRouter. Refreshing a page on any page other than '/space' gives a 404 error, and not even my own project error message. I have since learned that HashRouter can solve this problem although that would not be suitable for most websites as it adds a '#' to the URL.
 
 I also got more practice with sass and scss and tried mixins and key frames for the first time. Also the cool glassy effect of the header and sidebar is achieved by a transparent background and backdrop-filter: blur(xxpx); Unfortunately it is not supported by Firefox at the time of creating this project.
 
