@@ -13,7 +13,6 @@
 }
 
 .home__content {
-
     min-height: 100vh;
     padding: 88px 0 0;
     justify-content: space-between;
@@ -64,6 +63,7 @@
     @include desktop {
         height: 274px;
         width: 274px;
+        transform: translate(-20px, -25px);
     }
 
     &:hover {

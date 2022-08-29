@@ -806,6 +806,7 @@ header {
   .home__explore {
     height: 274px;
     width: 274px;
+    transform: translate(-20px, -25px);
   }
 }
 

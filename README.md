@@ -15,7 +15,6 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -116,10 +115,6 @@ import { motion } from 'framer-motion';
   />
 
 ```
-
-### Continued development
-
-It would be good to add a loading animation and set up the Router better so a user can refresh a page without getting a 404.
 
 ### Useful resources
 
