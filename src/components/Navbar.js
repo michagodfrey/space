@@ -8,7 +8,7 @@ const Navbar = ({openSidebar}) => {
       <button className="sidebar-btn" onClick={openSidebar}></button>
       <div className="navbar">
         <NavLink
-          to="/space"
+          to="/home"
           className={({ isActive }) =>
             isActive ? "navbar__link--active" : "navbar__link"
           }

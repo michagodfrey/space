@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header>
-      <Link to="/">
+      <Link to="/home">
         <img className="header__logo" src="/space/assets/shared/logo.svg" alt="home button" />
       </Link>
       <div className="header__line"></div>

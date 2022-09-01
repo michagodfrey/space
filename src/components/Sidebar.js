@@ -8,7 +8,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
       className={`${isSidebarOpen ? "sidebar sidebar--active" : "sidebar"}`}
     >
       <button className="sidebar__close-btn" onClick={closeSidebar}></button>
-        <Link to="/space" className="sidebar__link">
+        <Link to="/home" className="sidebar__link">
           <b>00</b> home
         </Link>
         <Link to="/destination" className="sidebar__link">
